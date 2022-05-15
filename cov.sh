@@ -1,18 +1,3 @@
-# llvm-cov-demo
-
-For the Homebrew toolchain
-
-- llvm
-- lcov
-- genhtml
-
-```bash
-#!/bin/zsh
-# llvm-gcov.sh
-exec llvm-cov gcov "$@"
-```
-
-```bash
 #!/bin/zsh
 # cov.sh
 rm -r coverage
@@ -23,4 +8,3 @@ clang -Wall -Wextra -pedantic -Werror -g -std=c99 --coverage ../src/hello.c -o h
 llvm-gcov.sh ../src/hello.c
 lcov --gcov-tool $PWD/../llvm-gcov.sh --capture --directory . --output-file coverage.info
 genhtml coverage.info --output-directory out
-```

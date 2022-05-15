@@ -50,3 +50,20 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# executable generated with cov
+hello
+
+# coverage files
+coverage/
+out/
+coverage.info
+*.gcda
+*.gcov
+*.gcno
+
+# macOS shenanigans
+.DS_Store
+
+# cmake build directories
+build*
